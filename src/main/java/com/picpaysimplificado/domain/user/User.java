@@ -1,11 +1,9 @@
 package com.picpaysimplificado.domain.user;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.usertype.UserType;
 
 import java.math.BigDecimal;
 
@@ -30,4 +28,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public Comparable<BigDecimal> getBalance() {
+        return balance;
+    }
 }
